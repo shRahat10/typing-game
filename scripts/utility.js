@@ -8,8 +8,19 @@ function showElement(elementId){
     element.classList.remove('hidden');
 }
 
+function addBackgroundColor(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.add('bg-orange-400');
+} 
+
+function removeBackgroundColor(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('bg-orange-400');
+} 
+
 function showRandomAlphabet(){
     const alphabet = randomAlphabet();
+    addBackgroundColor(alphabet);
     document.getElementById('show-alphabet').innerText = alphabet;
 }
 
@@ -26,6 +37,7 @@ function startGame(){
     hideElement('home-page');
     showElement('game-page');
     hideElement('end-page');
+    // removeBackgroundColor(element);
     showRandomAlphabet();
 }
 
