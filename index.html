@@ -30,56 +30,56 @@
 <body class="font-poppins text-white">
     <main class="min-h-screen bg-[#010313] bg-[url(images/background.png)] bg-no-repeat bg-center">
         <!-- home page -->
-        <section class="min-h-screen flex flex-col justify-center items-center space-y-10">
+        <section id="home-page" class="min-h-screen flex flex-col justify-center items-center space-y-10">
             <h1 class="anton text-9xl">ALPHABET CLASH</h1>
             <p class="text-2xl">
                 Unleash Your Keyboard Kung Fu : Press “Enter” to Play
             </p>
-            <button class="bg-white text-black w-40 h-20 rounded-lg text-2xl font-bold">
+            <button onclick="startGame()" class="bg-white text-black w-40 h-20 rounded-lg text-2xl font-bold">
                 Play Now
             </button>
         </section>
 
         <!-- game page -->
-        <section class="min-h-screen flex flex-col justify-center items-center space-y-10 hidden">
+        <section id="game-page" class="min-h-screen flex flex-col justify-center items-center space-y-10 hidden">
             <div
                 class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] bg-[#FFFFFFB3] flex flex-col justify-center items-center">
                 <p class="pb-4 text-center bg-[#010313CC] w-96 rounded-b-lg">Don't watch keyboard while playing</p>
-                <span class="m-auto text-9xl text-black">Y</span>
+                <span id="show-alphabet" class="m-auto text-9xl text-black">Y</span>
             </div>
             <div class="text-black">
                 <div class="flex justify-center gap-1 my-1 w-full">
-                    <kbd class="kbd">q</kbd>
-                    <kbd class="kbd">w</kbd>
-                    <kbd class="kbd">e</kbd>
-                    <kbd class="kbd">r</kbd>
-                    <kbd class="kbd">t</kbd>
-                    <kbd class="kbd">y</kbd>
-                    <kbd class="kbd">u</kbd>
-                    <kbd class="kbd">i</kbd>
-                    <kbd class="kbd">o</kbd>
-                    <kbd class="kbd">p</kbd>
+                    <kbd id="q" class="kbd">q</kbd>
+                    <kbd id="w" class="kbd">w</kbd>
+                    <kbd id="e" class="kbd">e</kbd>
+                    <kbd id="r" class="kbd">r</kbd>
+                    <kbd id="t" class="kbd">t</kbd>
+                    <kbd id="y" class="kbd">y</kbd>
+                    <kbd id="u" class="kbd">u</kbd>
+                    <kbd id="i" class="kbd">i</kbd>
+                    <kbd id="o" class="kbd">o</kbd>
+                    <kbd id="p" class="kbd">p</kbd>
                 </div>
                 <div class="flex justify-center gap-1 my-1 w-full">
-                    <kbd class="kbd">a</kbd>
-                    <kbd class="kbd">s</kbd>
-                    <kbd class="kbd">d</kbd>
-                    <kbd class="kbd">f</kbd>
-                    <kbd class="kbd">g</kbd>
-                    <kbd class="kbd">h</kbd>
-                    <kbd class="kbd">j</kbd>
-                    <kbd class="kbd">k</kbd>
-                    <kbd class="kbd">l</kbd>
+                    <kbd id="a" class="kbd">a</kbd>
+                    <kbd id="s" class="kbd">s</kbd>
+                    <kbd id="d" class="kbd">d</kbd>
+                    <kbd id="f" class="kbd">f</kbd>
+                    <kbd id="g" class="kbd">g</kbd>
+                    <kbd id="h" class="kbd">h</kbd>
+                    <kbd id="j" class="kbd">j</kbd>
+                    <kbd id="k" class="kbd">k</kbd>
+                    <kbd id="l" class="kbd">l</kbd>
                 </div>
                 <div class="flex justify-center gap-1 my-1 w-full">
-                    <kbd class="kbd">z</kbd>
-                    <kbd class="kbd">x</kbd>
-                    <kbd class="kbd">c</kbd>
-                    <kbd class="kbd">v</kbd>
-                    <kbd class="kbd">b</kbd>
-                    <kbd class="kbd">n</kbd>
-                    <kbd class="kbd">m</kbd>
-                    <kbd class="kbd">/</kbd>
+                    <kbd id="z" class="kbd">z</kbd>
+                    <kbd id="x" class="kbd">x</kbd>
+                    <kbd id="c" class="kbd">c</kbd>
+                    <kbd id="v" class="kbd">v</kbd>
+                    <kbd id="b" class="kbd">b</kbd>
+                    <kbd id="n" class="kbd">n</kbd>
+                    <kbd id="m" class="kbd">m</kbd>
+                    <kbd id="/" class="kbd">/</kbd>
                 </div>
             </div>
             <div class="flex w-[1024px] justify-between">
@@ -97,7 +97,7 @@
                             d="M21.6416 18.5001L24.5417 12.8334L22.5417 12.8334L22.5417 9.16675L19.5417 14.8334L21.6416 14.8334L21.6416 18.5001ZM22.0417 20.5001C21.1194 20.5001 20.2527 20.3251 19.4417 19.9751C18.6306 19.6251 17.925 19.1501 17.325 18.5501C16.7251 17.9501 16.25 17.2445 15.8999 16.4334C15.55 15.6223 15.375 14.7556 15.375 13.8334C15.375 12.9112 15.55 12.0445 15.8999 11.2334C16.25 10.4223 16.7251 9.71674 17.325 9.11676C17.925 8.51675 18.6306 8.04175 19.4417 7.69174C20.2527 7.34174 21.1194 7.16675 22.0417 7.16675C22.9639 7.16675 23.8306 7.34174 24.6416 7.69174C25.4529 8.04175 26.1584 8.51675 26.7583 9.11676C27.3584 9.71674 27.8333 10.4223 28.1833 11.2334C28.5334 12.0445 28.7083 12.9112 28.7083 13.8334C28.7083 14.7556 28.5334 15.6223 28.1833 16.4334C27.8333 17.2445 27.3584 17.9501 26.7583 18.5501C26.1584 19.1501 25.4529 19.6251 24.6416 19.9751C23.8306 20.3251 22.9639 20.5001 22.0417 20.5001Z"
                             fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
                     </svg>
-                    <span>1</span>
+                    <span id="life">3</span>
                 </button>
                 <button class="flex justify-center items-center gap-3 bg-[#360490] w-40 h-14 rounded-3xl">
                     <p>Score</p>
@@ -107,22 +107,24 @@
                             d="M9.63232 17.9945L11.4846 17.9945L11.4846 16.6714C12.3667 16.5126 13.1255 16.1686 13.7605 15.6393C14.3955 15.1101 14.7131 14.325 14.7131 13.2842C14.7131 12.5432 14.5015 11.864 14.0781 11.2466C13.6545 10.6291 12.8079 10.091 11.5376 9.63235C10.4792 9.27951 9.74707 8.97079 9.34131 8.70618C8.93555 8.44153 8.73267 8.0799 8.73267 7.62122C8.73267 7.16251 8.89575 6.80087 9.22217 6.53622C9.54858 6.27161 10.0205 6.13931 10.6379 6.13931C11.2024 6.13931 11.6436 6.27603 11.9609 6.54947C12.2786 6.82291 12.5081 7.16251 12.6492 7.56827L14.3428 6.88025C14.1487 6.26279 13.7913 5.72473 13.271 5.26605C12.7505 4.80734 12.1729 4.55154 11.5376 4.49863L11.5376 3.17551L9.6853 3.17551L9.6853 4.49863C8.80322 4.69269 8.11523 5.08081 7.62109 5.66296C7.1272 6.24515 6.88037 6.89789 6.88037 7.62122C6.88037 8.45035 7.1228 9.12073 7.60791 9.63235C8.09302 10.144 8.8562 10.585 9.89697 10.9555C11.0083 11.3612 11.7803 11.7229 12.2124 12.0404C12.6448 12.358 12.8608 12.7726 12.8608 13.2842C12.8608 13.8664 12.6536 14.2942 12.239 14.5676C11.8242 14.8411 11.3259 14.9778 10.7439 14.9778C10.1616 14.9778 9.64551 14.7969 9.1958 14.4353C8.74585 14.0736 8.41504 13.5312 8.20337 12.8079L6.45679 13.4959C6.70386 14.3427 7.08765 15.0263 7.60791 15.5467C8.12842 16.0671 8.80322 16.4244 9.63232 16.6184L9.63232 17.9945ZM10.585 21.17C9.12085 21.17 7.74463 20.8922 6.45679 20.3364C5.16895 19.7807 4.04883 19.0266 3.09619 18.0739C2.14355 17.1212 1.38916 16.001 0.833496 14.7132C0.277832 13.4253 0 12.0493 0 10.585C0 9.12073 0.277832 7.74469 0.833496 6.45685C1.38916 5.16901 2.14355 4.04877 3.09619 3.0961C4.04883 2.14346 5.16895 1.38928 6.45679 0.833557C7.74463 0.277863 9.12085 0 10.585 0C12.0493 0 13.4253 0.277863 14.7131 0.833557C16.001 1.38928 17.1213 2.14346 18.074 3.0961C19.0266 4.04877 19.7808 5.16901 20.3364 6.45685C20.8921 7.74469 21.1699 9.12073 21.1699 10.585C21.1699 12.0493 20.8921 13.4253 20.3364 14.7132C19.7808 16.001 19.0266 17.1212 18.074 18.0739C17.1213 19.0266 16.001 19.7807 14.7131 20.3364C13.4253 20.8922 12.0493 21.17 10.585 21.17Z"
                             fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero" />
                     </svg>
-                    <span>1</span>
+                    <span id="score">0</span>
                 </button>
             </div>
         </section>
 
         <!-- ending page -->
-        <section class="min-h-screen flex flex-col justify-center items-center hidden">
+        <section id="end-page" class="min-h-screen flex flex-col justify-center items-center hidden">
             <div class="flex flex-col justify-center items-center w-96 h-72 bg-[#FFFFFF33] rounded-lg space-y-10">
-                <h1 class="text-6xl font-bold">Score: <Span>14</Span></h1>
-                <button class="bg-white text-black w-40 h-16 rounded-lg text-2xl font-bold">
+                <h1 class="text-6xl font-bold">Score: <span id="final-score">0</span></h1>
+                <button onclick="startGame()" class="bg-white text-black w-40 h-16 rounded-lg text-2xl font-bold">
                     Play Now
                 </button>
                 <p>Practice will make you Pro</p>
             </div>
         </section>
     </main>
+    <script src="scripts/alphabet-clash.js"></script>
+    <script src="scripts/utility.js"></script>
 </body>
 
 </html>
