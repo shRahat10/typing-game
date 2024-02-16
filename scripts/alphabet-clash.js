@@ -9,7 +9,6 @@ function randomAlphabet(){
     return alphabet;
 }
 
-
 function keyBoardAlphabet(e){
     const keyPressed = e.key;
     const convertedKeyPressed = keyPressed.toLocaleLowerCase();
