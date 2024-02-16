@@ -38,6 +38,7 @@ function startGame(){
     showElement('game-page');
     hideElement('end-page');
     showRandomAlphabet();
+    document.addEventListener('keyup', keyBoardAlphabet);
 }
 
 function continueGame(currentAlphabet) {
@@ -52,4 +53,5 @@ function gameOver(currentAlphabet){
     document.getElementById('score').innerText = '0';
     document.getElementById('life').innerText = '3';
     removeBackgroundColor(currentAlphabet);
+    document.removeEventListener('keyup', keyBoardAlphabet);
 }

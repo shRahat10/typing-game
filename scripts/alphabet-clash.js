@@ -9,7 +9,6 @@ function randomAlphabet(){
     return alphabet;
 }
 
-document.addEventListener('keyup', keyBoardAlphabet);
 
 function keyBoardAlphabet(e){
     const keyPressed = e.key;
