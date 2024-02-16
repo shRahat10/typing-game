@@ -18,24 +18,23 @@ function keyBoardAlphabet(e){
     let currentLife = document.getElementById('life').innerText;
     const currentAlphabet = document.getElementById('show-alphabet').innerText.toLocaleLowerCase();
  
-    if (keyPressed === 'Escape') {
-        gameOver();
-        removeBackgroundColor(currentAlphabet)
-    }
-   
     if (convertedKeyPressed === currentAlphabet) {
         currentScore++;
         showScore(currentScore);
-        removeBackgroundColor(currentAlphabet);
-        showRandomAlphabet();
+        continueGame(currentAlphabet);
     }
+    
+    else if (keyPressed === 'Escape') {
+        showScore(currentScore);
+        gameOver(currentAlphabet);
+    }
+
     else{
         currentLife--;
         showLife(currentLife)
         if (currentLife === 0) {
             showScore(currentScore);
-            gameOver();
-            removeBackgroundColor(currentAlphabet)
+            gameOver(currentAlphabet);
         }
     }
 }

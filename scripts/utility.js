@@ -40,10 +40,16 @@ function startGame(){
     showRandomAlphabet();
 }
 
-function gameOver(){
+function continueGame(currentAlphabet) {
+    removeBackgroundColor(currentAlphabet);
+    showRandomAlphabet();
+}
+
+function gameOver(currentAlphabet){
     hideElement('home-page');
     hideElement('game-page');
     showElement('end-page');
     document.getElementById('score').innerText = '0';
     document.getElementById('life').innerText = '3';
+    removeBackgroundColor(currentAlphabet);
 }
