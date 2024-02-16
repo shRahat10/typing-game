@@ -27,7 +27,7 @@ function keyBoardAlphabet(e){
         currentScore++;
         showScore(currentScore);
         removeBackgroundColor(currentAlphabet);
-        startGame();
+        showRandomAlphabet();
     }
     else{
         currentLife--;

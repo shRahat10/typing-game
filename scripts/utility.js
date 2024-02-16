@@ -37,7 +37,6 @@ function startGame(){
     hideElement('home-page');
     showElement('game-page');
     hideElement('end-page');
-    // removeBackgroundColor(element);
     showRandomAlphabet();
 }
 
